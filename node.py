@@ -5,7 +5,6 @@ class Node:
   def __init__(self, puzzle, g_n=0):
     self.state = puzzle
     self.g_n = g_n
-    self.parent = None
         
   def getPossibleStates(self):
     for i in range(len(self.state)):
