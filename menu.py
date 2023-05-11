@@ -1,32 +1,8 @@
-trivial = [
-  ['1', '2', '3'],
-  ['4', '5', '6'],
-  ['7', '8', '0']
-]
-
-veryEasy = [
-  ['1', '2', '3'],
-  ['4', '5', '6'],
-  ['7', '0', '8']
-]
-
-easy = [
-  ['1', '2', '0'],
-  ['4', '5', '3'],
-  ['7', '8', '6']
-]
-
-doable = [
-  ['0', '1', '2'],
-  ['4', '5', '3'],
-  ['7', '8', '6']
-]
-
-ohBoy = [
-  ['8', '7', '1'],
-  ['6', '0', '2'],
-  ['5', '4', '3']
-]
+trivial = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '0']]
+veryEasy = [['1', '2', '3'], ['4', '5', '6'], ['7', '0', '8']]
+easy = [['1', '2', '0'], ['4', '5', '3'], ['7', '8', '6']]
+doable = [['0', '1', '2'], ['4', '5', '3'], ['7', '8', '6']]
+ohBoy = [['8', '7', '1'], ['6', '0', '2'], ['5', '4', '3']]
 
 def defaultPuzzle():
   print("Choose a default puzzle.")
@@ -59,6 +35,16 @@ def customPuzzle():
   row3 = thirdRow.split(" ")
 
   return [row1, row2, row3]
+
+def pickAlgorithm():
+    algorithmMessage = "Enter your choice of algorithm.\n"
+    algorithmMessage += "1. Uniform Cost Search\n"
+    algorithmMessage += "2. A* with the Misplaced Tile heuristic\n"
+    algorithmMessage += "3. A* with the Euclidean distance heuristic\n"
+
+    option = input(algorithmMessage)
+
+    return option
 
 def menu():
     menu = "Welcome to 862157074 8 puzzle solver\n"
